@@ -1,0 +1,123 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-green: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+@font-face {
+  font-family: "BigShouldersDisplay";
+  src: url("../fonts/BigShouldersDisplay.ttf");
+}
+
+@font-face {
+  font-family: "LexendDeca";
+  src: url("../fonts/LexendDeca.ttf");
+}
+
+.container {
+  height: 500px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+img {
+  width: 60px;
+}
+
+h1 {
+  font-family: "BigShouldersDisplay";
+  font-weight: 700;
+  color: var(--very-light-gray);
+}
+
+p {
+  font-family: "LexendDeca";
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--transparent-white);
+  line-height: 200%;
+}
+
+button {
+  position: relative;
+  bottom: 0;
+  width: 120px;
+  height: 40px;
+  align-self: flex-start;
+  background-color: var(--very-light-gray);
+  border: none;
+  border-radius: 20px;
+  font-family: "LexendDeca";
+  font-weight: 400;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.sedanContainer {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bright-orange);
+  padding: 40px;
+}
+
+.sedanContainer button {
+  color: var(--bright-orange);
+}
+
+.sedanContainer button:active {
+  background-color: var(--bright-orange);
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+
+.suvContainer {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--dark-green);
+  padding: 40px;
+}
+
+.suvContainer button {
+  color: var(--dark-green);
+}
+
+.suvContainer button:active {
+  background-color: var(--dark-green);
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+
+.luxuryContainer {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--very-dark-cyan);
+  padding: 40px;
+}
+
+.luxuryContainer button {
+  color: var(--very-dark-cyan);
+}
+
+.luxuryContainer button:active {
+  background-color: var(--very-dark-cyan);
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+
+@media only screen and (max-width: 850px) {
+  .container {
+    height: auto;
+    flex-direction: column;
+  }
+}
